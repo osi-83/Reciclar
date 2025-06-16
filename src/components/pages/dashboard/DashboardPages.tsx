@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import type { Usuario, LocalColeta } from '../../../types';
 import './DashboardPage.css';
-import dashboardImage from '../../../assets/dashboard-image.png';
+/*import dashboardImage from '../../../assets/dashboard-image.png';*/
 
 type Props = {
   usuarioLogado: Usuario;
@@ -45,7 +45,7 @@ export function DashboardPage({ usuarioLogado, onIrParaCadastro, onLogout }: Pro
         <h1>Bem-vindo(a), {usuarioLogado.nome}!</h1>
 
         <img
-          src={dashboardImage}
+          src="/dashboard-image.png"
           className='dashboard-image'
           alt="Recicla365 - gerenciamento de resíduos"
 
