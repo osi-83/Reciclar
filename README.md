@@ -1,7 +1,7 @@
 # Reciclar
 
-Criada a plataforma com a premissa, de auxilio no gerenciamento da destinação dos
-residuos recicláveis e trazer ao conhecimento dos usuários do sistema, os locais (pontos) de coleta desses materiais.<br>
+Criada a plataforma com a premissa, de auxiliar o gerenciamento da destinação dos
+resíduos recicláveis e trazer ao conhecimento dos usuários do sistema, os locais (pontos) de coleta desses materiais, além de permitir ao usuário, cadastrar novos pontos sob sua responsabilidade.<br>
 Buscando promover a sustentabilidade, conectando cidadãos a locais de descarte adequado, incentivando a conscientização ambiental.
 
 # Objetivo
