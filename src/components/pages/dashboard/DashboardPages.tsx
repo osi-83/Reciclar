@@ -8,7 +8,6 @@ type Props = {
   onIrParaCadastro: () => void;
   onLogout: () => void;
 };
-
 export function DashboardPage({ usuarioLogado, onIrParaCadastro, onLogout }: Props) {
   const [locais, setLocais] = useState<LocalColeta[]>([]);
   const [quantidadeUsuarios, setQuantidadeUsuarios] = useState<number>(0);
@@ -44,60 +43,68 @@ export function DashboardPage({ usuarioLogado, onIrParaCadastro, onLogout }: Pro
     <div className="dashboard">
       <h1>Bem-vindo(a), {usuarioLogado.nome}!</h1>
 
-      <img
-        src="/src/assets/dashboard-image.png"
-        alt="Recicla365 - gerenciamento de resíduos"
-        className="dashboard-image"
-      />
+      return (
+      <div className="dashboard">
+        <h1>Bem-vindo(a), {usuarioLogado.nome}!</h1>
 
-      <div className="dashboard-cards">
-        <div className="dashboard-card">
-          <h3>Usuários Ativos</h3>
-          <p>{quantidadeUsuarios}</p>
+        <img
+          src="/dashboard-image.png"
+          alt="Recicla365 - gerenciamento de resíduos"
+
+        />
+
+        <div className="dashboard-cards">
+          <div className="dashboard-card">
+            <h3>Usuários Ativos</h3>
+            <p>{quantidadeUsuarios}</p>
+          </div>
+          <div className="dashboard-card">
+            <h3>Locais de Coleta</h3>
+            <p>{locais.length}</p>
+          </div>
         </div>
-        <div className="dashboard-card">
-          <h3>Locais de Coleta</h3>
-          <p>{locais.length}</p>
+
+        <h2>Locais de Coleta Cadastrados:</h2>
+
+        {locais.length === 0 ? (
+          <p>Nenhum local de coleta cadastrado ainda.</p>
+        ) : (
+          <ul>
+            {locais.map((local) => (
+              <li key={local.id} style={{ marginBottom: '1rem' }}>
+                <strong>{local.nome}</strong> - {local.descricao} - {local.bairro}, {local.cidade}
+                <br />
+                <button onClick={() => handleEditarLocal(local.id)} style={{ marginRight: '0.5rem' }}>
+                  ✏️ Editar
+                </button>
+                <button onClick={() => handleExcluirLocal(local.id)} style={{ backgroundColor: 'darkred', color: 'white' }}>
+                  🗑️ Excluir
+                </button>
+              </li>
+            ))}
+          </ul>
+        )}
+
+        <div className="dashboard-buttons">
+          <button onClick={onIrParaCadastro}>Cadastrar Novo Local</button>
+          <button
+            onClick={onLogout}
+            style={{
+              marginLeft: '1rem',
+              position: 'relative',
+              top: '1px',
+              backgroundColor: 'darkred',
+              color: 'white',
+              padding: '0.5rem 1rem',
+            }}
+          >
+            🚪 Sair
+          </button>
         </div>
       </div>
+    );
+  </div>
+  
+);
 
-      <h2>Locais de Coleta Cadastrados:</h2>
-
-      {locais.length === 0 ? (
-        <p>Nenhum local de coleta cadastrado ainda.</p>
-      ) : (
-        <ul>
-          {locais.map((local) => (
-            <li key={local.id} style={{ marginBottom: '1rem' }}>
-              <strong>{local.nome}</strong> - {local.descricao} - {local.bairro}, {local.cidade}
-              <br />
-              <button onClick={() => handleEditarLocal(local.id)} style={{ marginRight: '0.5rem' }}>
-                ✏️ Editar
-              </button>
-              <button onClick={() => handleExcluirLocal(local.id)} style={{ backgroundColor: 'darkred', color: 'white' }}>
-                🗑️ Excluir
-              </button>
-            </li>
-          ))}
-        </ul>
-      )}
-
-      <div className="dashboard-buttons">
-        <button onClick={onIrParaCadastro}>Cadastrar Novo Local</button>
-        <button
-          onClick={onLogout}
-          style={{
-            marginLeft: '1rem',
-            position: 'relative',
-            top: '1px',
-            backgroundColor: 'darkred',
-            color: 'white',
-            padding: '0.5rem 1rem',
-          }}
-        >
-          🚪 Sair
-        </button>
-      </div>
-    </div>
-  );
 }

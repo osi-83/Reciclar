@@ -23,8 +23,6 @@ export function CollectPointForm({ usuarioId, onSalvar, localEditavel }: Props) 
   const [erroCep, setErroCep] = useState('');
 
   useEffect(() => {
-    alert('useEffect disparado com localEditavel');
-
     if (localEditavel) {
       setNome(localEditavel.nome ?? '');
       setDescricao(localEditavel.descricao ?? '');
@@ -37,8 +35,6 @@ export function CollectPointForm({ usuarioId, onSalvar, localEditavel }: Props) 
       setResiduos(Array.isArray(localEditavel.residuos) ? localEditavel.residuos : []);
       setErroCep('');
     } else {
-      alert(' Criando novo local de coleta.');
-      
       setNome('');
       setDescricao('');
       setCep('');
