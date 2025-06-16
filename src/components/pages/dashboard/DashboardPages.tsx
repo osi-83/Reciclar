@@ -48,7 +48,8 @@ export function DashboardPage({ usuarioLogado, onIrParaCadastro, onLogout }: Pro
         <h1>Bem-vindo(a), {usuarioLogado.nome}!</h1>
 
         <img
-          src="/dashboard-image.png"
+          src="src/assets/dashboard-image.png"
+          className='dashboard-image'
           alt="Recicla365 - gerenciamento de resíduos"
 
         />
