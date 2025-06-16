@@ -1,0 +1,90 @@
+.collect-page-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 800px;
+  margin: 2rem auto;
+  padding: 2rem;
+  background-color: gray;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  text-align: center;
+}
+
+.collect-page-container input,
+.collect-page-container textarea {
+  width: 100%;
+  padding: 0.75rem;
+  margin-bottom: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+ 
+}
+
+.collect-page-container textarea {
+  resize: vertical;
+  min-height: 100px; 
+}
+
+.collect-page-container button {
+  background-color: #2d6a4f;
+  color: #fff;
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.collect-page-container button:hover {
+  background-color: #1b4332;
+}
+
+.collect-page-container fieldset {
+  border: none;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+.collect-page-container legend {
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+.collect-page-container label {
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+.cep-container {
+  display: flex;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.cep-container input {
+  flex: 1;
+}
+
+@media screen and (max-width: 600px) {
+  .collect-page-container {
+    padding: 1rem;
+    margin-right: 10px;
+  }
+  .collect-page-container h2 {
+  font-size: 0.75rem;
+  }
+  .collect-page-container h3 {
+  font-size: 1.2rem;
+  }  
+  .collect-page-container textarea {
+  resize: vertical;
+  }
+  
+}

@@ -1,0 +1,109 @@
+.register-form {
+  max-width: 500px;
+  margin: 0 auto;
+  padding: 2rem;
+  background-color: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.05);
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.register-form h2 {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.register-form input {
+  padding: 0.75rem;
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+  width: 100%;
+  font-size: 1rem;
+}
+
+.register-form button {
+  padding: 0.75rem;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: 500;
+  transition: background-color 0.3s ease;
+}
+
+.register-form button[type="submit"] {
+  background-color: #2563eb;
+  color: white;
+}
+
+.register-form button[type="submit"]:hover {
+  background-color: #1e40af;
+}
+
+.register-form button.secondary {
+  background-color: #e5e7eb;
+  color: #111827;
+}
+
+.register-form button.secondary:hover {
+  background-color: #d1d5db;
+}
+
+.register-form .endereco-preview {
+  font-size: 0.9rem;
+  color: #4b5563;
+  background-color: #f9fafb;
+  padding: 0.5rem;
+  border-radius: 6px;
+}
+
+.local-lista {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.local-card {
+  background-color: #ffffff;
+  border: 1px solid #e0e0e0;
+  border-radius: 10px;
+  padding: 1rem;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.local-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
+}
+
+.local-card h4 {
+  margin: 0 0 0.5rem 0;
+  font-size: 1.2rem;
+  color: #2d6a4f;
+}
+
+.local-card p {
+  margin: 0.3rem 0;
+  color: #555;
+  font-size: 0.95rem;
+}
+
+.local-card .residuos {
+  margin-top: 0.75rem;
+}
+
+.local-card .residuos span {
+  display: inline-block;
+  background-color: #d8f3dc;
+  color: #1b4332;
+  padding: 0.25rem 0.5rem;
+  margin: 0.2rem;
+  border-radius: 6px;
+  font-size: 0.85rem;
+}
