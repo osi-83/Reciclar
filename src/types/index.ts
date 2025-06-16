@@ -7,7 +7,8 @@ export type Usuario = {
   email: string;
   senha: string;
   endereco: string;
-}
+};
+
 export type TipoResiduo =
   | 'Vidro'
   | 'Metal'
@@ -34,5 +35,7 @@ export type LocalColeta = {
   logradouro: string;
   bairro: string;
   cidade: string;
+  localidade: string;
+  uf: string;
   residuos: string[];
 };

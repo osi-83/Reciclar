@@ -28,7 +28,7 @@ export function ListaLocaisPage({ locais, onEditar, onDeletar }: Props) {
             >
               <p><strong>{local.nome}</strong></p>
               <p>{local.descricao}</p>
-              <p>{local.endereco.bairro}, {local.endereco.localidade} - {local.endereco.uf}</p>
+              <p>{local.bairro}, {local.localidade} - {local.uf}</p>
 
               <div style={{ marginTop: '0.5rem' }}>
                 <button
